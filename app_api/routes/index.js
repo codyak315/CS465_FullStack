@@ -8,6 +8,9 @@ router
     .get(tripsController.tripsList)
     .post(tripsController.tripsAddTrip);
 
-router.route('/trips/:tripCode').get(tripsController.tripsFindCode);
+router
+    .route('/trips/:tripCode')
+    .get(tripsController.tripsFindCode)
+    .put(tripsController.tripsUpdateTrip);
 
 module.exports = router;
